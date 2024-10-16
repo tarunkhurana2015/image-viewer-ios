@@ -13,10 +13,11 @@ import ComposableArchitecture
 struct ImageViewerApp: App {
     var body: some Scene {
         WindowGroup {
-
-            SearchImageView(store: Store(initialState: SearchImageViewReducer.State(), reducer: {
-                SearchImageViewReducer()
-            }))
+            
+                SearchImageView(store: Store(initialState: SearchImageViewReducer.State(), reducer: {
+                    SearchImageViewReducer()
+                }))
+            
         }
     }
 }

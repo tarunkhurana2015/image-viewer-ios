@@ -24,7 +24,7 @@ public struct SearchImageViewReducer {
         public enum ViewState {
             case appeared
             case loading
-            case loaded(entities: [ImageEntity])
+            case loaded(entities: [ImageEntity], morePagesAvailable: Bool)
             case error(error: Error, searchTerm: String)
         }
         
@@ -38,9 +38,9 @@ public struct SearchImageViewReducer {
     public enum Action {
         case viewAppeared
         case searchCleared
-        case searchCancelled
+        case searchCancelled(oldEntities: [ImageEntity], searchTerm: String)
         case loadData(oldEntities: [ImageEntity], searchTerm: String)
-        case loadedData(entity: [ImageEntity], searchTerm: String)
+        case loadedData(entity: [ImageEntity], searchTerm: String, morePagesAvailable: Bool)
         case loadNextPageData(oldEntities: [ImageEntity], searchTerm: String)
         case errorInLoadingData(error: Error, searchTerm: String)
     }
@@ -56,7 +56,8 @@ public struct SearchImageViewReducer {
                 state.viewState = .appeared
                 state.page = 1
                 return .none
-            case .searchCancelled:
+            case let .searchCancelled(oldEntities, _):
+                state.viewState = .loaded(entities: oldEntities, morePagesAvailable: true)
                 return .none
             case let .loadData(oldEntities, searchTerm):
                 if oldEntities.isEmpty {
@@ -71,13 +72,17 @@ public struct SearchImageViewReducer {
                     do {
                         let entities = try await useCaseSearch.execute(for: searchTerm.lowercased().replacingOccurrences(of: " ", with: ""), page: page, per_page: 20)
                         let newEntities = oldEntities + entities // append the new page entities
-                        await send(.loadedData(entity: newEntities, searchTerm: searchTerm))
+                        await send(.loadedData(entity: newEntities, searchTerm: searchTerm, morePagesAvailable: true))
                     } catch {
-                        await send(.errorInLoadingData(error: error, searchTerm: searchTerm))
+                        if page == 1 { // error on loading the first page
+                            await send(.errorInLoadingData(error: error, searchTerm: searchTerm))
+                        } else { // error in loading any other page, don't show the error, just show the same data.
+                            await send(.loadedData(entity: oldEntities, searchTerm: searchTerm, morePagesAvailable: false))
+                        }
                     }
                 }
-            case let .loadedData(entities, _):
-                state.viewState = .loaded(entities: entities)
+            case let .loadedData(entities, _, morePagesAvailable):
+                state.viewState = .loaded(entities: entities, morePagesAvailable: morePagesAvailable)
                 return .none
             case let .loadNextPageData(oldEntities, searchTerm):
                 state.page += 1 // increment the page count

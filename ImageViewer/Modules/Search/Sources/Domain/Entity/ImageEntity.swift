@@ -11,7 +11,7 @@ import Foundation
 
 public struct ImageEntity: Hashable, Identifiable {
     
-    public let id: Int
+    public let id: String
     let previewImageUrl: URL?
     let previewWidth: Int
     let previewHeight: Int

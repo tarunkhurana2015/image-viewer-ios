@@ -26,7 +26,7 @@ public struct SearchRepository: SearchRepositoryProtocol {
                 throw SearchError.noDataFound
             }
             return imageData.hits.map {
-                ImageEntity(id: $0.id, previewImageUrl: URL(string: $0.previewURL), previewWidth: $0.previewWidth, previewHeight: $0.previewHeight, largeImageUrl: URL(string: $0.largeImageURL), tags: $0.tags, postedBy: $0.user)
+                ImageEntity(id: UUID().uuidString, previewImageUrl: URL(string: $0.previewURL), previewWidth: $0.previewWidth, previewHeight: $0.previewHeight, largeImageUrl: URL(string: $0.largeImageURL), tags: $0.tags, postedBy: $0.user)
             }
             
         } catch {
