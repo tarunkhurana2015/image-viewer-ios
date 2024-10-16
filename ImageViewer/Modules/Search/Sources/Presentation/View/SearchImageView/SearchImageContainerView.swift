@@ -43,9 +43,14 @@ struct SearchImageContainerView: View {
                     }
                     LazyVGrid(columns: adaptiveColumn, spacing: 20) {
                         ForEach(entities, id: \.id) { entity in
-                            ImageGridView(imageEntity: entity)
+                            NavigationLink(value: entity) {
+                                ImageGridView(imageEntity: entity)
+                            }
                         }
                     }.padding()
+                        .navigationDestination(for: ImageEntity.self) { entity in
+                            SearchImageDetailView(entity: entity)
+                        }
                     LazyVGrid(columns: singleColumn, spacing: 50) {
                         VStack() {
                             HStack{
