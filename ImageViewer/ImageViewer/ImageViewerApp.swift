@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import Search
+import ComposableArchitecture
 
 @main
 struct ImageViewerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+
+            SearchImageView(store: Store(initialState: SearchImageViewReducer.State(), reducer: {
+                SearchImageViewReducer()
+            }))
         }
     }
 }
