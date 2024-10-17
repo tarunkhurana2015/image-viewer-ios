@@ -40,7 +40,7 @@ public struct SearchImageView: View {
                 case let .loaded(entities, morePagesAvailable):
                     
                     VStack {
-                        SearchImageContainerView(store: store, searchTerm: $searchTerm, entities: entities, morePagesAvailable: morePagesAvailable)
+                        SearchImageContainerView(store: store, searchTerm: $searchTerm, entities: entities, morePagesAvailable: morePagesAvailable)                            
                     }
                     
                 case let .error(error, searchTerm):

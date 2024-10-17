@@ -71,6 +71,11 @@ struct SearchImageContainerView: View {
             .onChange(of: moveToTopIndicator) { _ in
                 proxy.scrollTo("searchimages")
             }
+            .onChange(of: isSearching, perform: { newValue in
+                if !newValue {
+                    store.send(.searchCancelled(oldEntities: entities))
+                }
+            })
         }
     }
 }
