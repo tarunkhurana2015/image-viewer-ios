@@ -65,5 +65,13 @@ The app supports
 | Dark Mode      | `yes`    |
 
 
-## Reference
+## Screenshots
+
+![iPhone Portrait](Screenshots/iphone-portrait.png)
+![iPhone Landscape](Screenshots/iphone-landscape.png)
+![iPhone Dark](Screenshots/iphone-dark.png)
+
+![iPad Portrait](Screenshots/ipad-portrait.png)
+![iPad Landscape](Screenshots/ipad-landscape.png)
+![iPad Dark](Screenshots/ipad-dark.png)
 
