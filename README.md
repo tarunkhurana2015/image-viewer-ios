@@ -6,7 +6,7 @@ Clean architecture principle emphasizes the sepration of concertns between diffe
 ## Layers
 The Clean Architecture divides a project into 3 layers:
 
-![cleanarchitecture](Resources/cleanarchitecture.png)
+![cleanarchitecture](Screenshots/cleanarchitecture.png)
 
 1. `Domain Layer` - (Business logic) is the inner-most part of the onion (without dependencies to other layers, it is totally isolated). It contains `Entities(Business Models)`, `Use Cases`, and `Repository Interfaces`. This layer could be potentially reused within different projects. Such separation allows for not using the host app within the test target because no dependencies (also 3rd party) are needed — this makes the Domain Use Cases tests take just a few seconds. Note: Domain Layer should not include anything from other layers(e.g Presentation — UIKit or SwiftUI or Data Layer — Mapping Codable).
 2. `Presentation Layer` - contains UI (UIViewControllers or `SwiftUI` Views). Views are coordinated by `ViewModels` (Presenters) which execute one or many Use Cases. Presentation Layer depends only on the Domain Layer.
@@ -14,7 +14,7 @@ The Clean Architecture divides a project into 3 layers:
 
 ## Dependency Graph
 
-![graph](Resources/cleanarchitecture2.png)
+![graph](Screenshots/cleanarchitecture2.png)
 
 ### Data Flow
  - View(UI) calls action from Store (Recucer).
