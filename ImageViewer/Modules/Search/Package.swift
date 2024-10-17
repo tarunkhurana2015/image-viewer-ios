@@ -17,6 +17,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-dependencies", exact: "1.2.2"),
         .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", exact: "1.10.0"),
+        .package(url: "https://github.com/lorenzofiamingo/swiftui-cached-async-image", exact: "2.1.1"),
         .package(name: "Network", path: "../Network")
     ],
     targets: [
@@ -27,7 +28,8 @@ let package = Package(
             dependencies: [
                 .product(name: "Dependencies", package: "swift-dependencies"),
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
-                .product(name: "Network", package: "Network")        
+                .product(name: "CachedAsyncImage", package: "swiftui-cached-async-image"),
+                .product(name: "Network", package: "Network")
             ],
             resources: [
                 .process("Resources")

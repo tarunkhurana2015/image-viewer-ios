@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "D3D5272D-BA76-465E-952B-5383E266416D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ImageViewer.xcodeproj",
+      "identifier" : "DDAF9F972CBF0EBD004827E5",
+      "name" : "ImageViewer"
+    },
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Network",
+        "identifier" : "NetworkTests",
+        "name" : "NetworkTests"
+      }
+    }
+  ],
+  "version" : 1
+}

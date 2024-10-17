@@ -1,6 +1,15 @@
 {
-  "originHash" : "9d9c76ae8192880de9202462e736a884c2970042e4331f5f1c0f6bc77d6a8663",
+  "originHash" : "cc7ec794086d8df0df272029ce2587667a77d014b185e71ede6d80f1431b1418",
   "pins" : [
+    {
+      "identity" : "asyncimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/baskurthalit/asyncImage.git",
+      "state" : {
+        "revision" : "8f2a46b5b73ee7a581a253566cf458b02e23ce32",
+        "version" : "1.0.2"
+      }
+    },
     {
       "identity" : "combine-schedulers",
       "kind" : "remoteSourceControl",

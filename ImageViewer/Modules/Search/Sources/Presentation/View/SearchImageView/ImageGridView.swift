@@ -13,7 +13,7 @@ struct ImageGridView: View {
     init(imageEntity: ImageEntity) {
         self.imageEntity = imageEntity
     }
-    //CGFloat(imageEntity.previewWidth) / CGFloat(imageEntity.previewHeight),
+    
     @ViewBuilder
     var body: some View {
         VStack {

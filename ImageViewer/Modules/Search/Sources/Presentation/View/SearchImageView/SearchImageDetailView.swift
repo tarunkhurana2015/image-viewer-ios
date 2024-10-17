@@ -9,6 +9,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import CachedAsyncImage
 
 public struct SearchImageDetailView: View {
     
@@ -19,7 +20,7 @@ public struct SearchImageDetailView: View {
     
     public var body: some View {
         VStack {
-            AsyncImage(url: entity.largeImageUrl) { image in
+            CachedAsyncImage(url: entity.largeImageUrl) { image in
                 VStack {
                     image
                         .resizable()
