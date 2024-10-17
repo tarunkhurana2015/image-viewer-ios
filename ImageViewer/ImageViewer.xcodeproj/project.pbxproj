@@ -21,6 +21,7 @@
 		DDAD1DCC2CBF241F0022B294 /* Search */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Search; path = Modules/Search; sourceTree = SOURCE_ROOT; };
 		DDAD1DD12CBF2E550022B294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DDAD1DD32CC0B1B30022B294 /* ImageViewerTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ImageViewerTestPlan.xctestplan; sourceTree = "<group>"; };
+		DDAD1DD42CC151FB0022B294 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		DDAF9F982CBF0EBD004827E5 /* ImageViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDAF9F9B2CBF0EBD004827E5 /* ImageViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerApp.swift; sourceTree = "<group>"; };
 		DDAF9F9F2CBF0EC0004827E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				DDAD1DD32CC0B1B30022B294 /* ImageViewerTestPlan.xctestplan */,
+				DDAD1DD42CC151FB0022B294 /* Documentation.docc */,
 				DDAF9F9A2CBF0EBD004827E5 /* ImageViewer */,
 				DDAF9F992CBF0EBD004827E5 /* Products */,
 			);
