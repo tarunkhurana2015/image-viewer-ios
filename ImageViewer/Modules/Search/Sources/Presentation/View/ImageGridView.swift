@@ -15,6 +15,8 @@ struct ImageGridView: View {
         self.imageEntity = imageEntity
     }
     
+    @Environment(\.colorScheme) var colorScheme
+    
     @ViewBuilder
     var body: some View {
         VStack {
@@ -37,20 +39,20 @@ struct ImageGridView: View {
                     Text(imageEntity.tags)
                         .font(.caption)
                         .fontWeight(.heavy)
-                        .foregroundColor(.black)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                     Text(imageEntity.postedBy)
                         .font(.caption2)
                         .fontWeight(.medium)
-                        .foregroundColor(.black)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                 }
                 .frame(height: 20,alignment: .topLeading)
                 .padding()
                 Spacer()
             }
         }
-        .background(.white, in: RoundedRectangle(cornerRadius: 10.0))
-        .clipShape(RoundedRectangle(cornerRadius: 10, style: .circular))
-        .shadow(color: .black, radius: 5)
+        .background(colorScheme == .dark ? .black : .white, in: RoundedRectangle(cornerRadius: 5))
+        .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
+        .shadow(color: colorScheme == .dark ? .white : .black, radius: 1)
         
     }
 }

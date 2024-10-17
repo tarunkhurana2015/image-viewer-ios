@@ -18,10 +18,8 @@ struct SearchImageContainerView: View {
     let entities: [ImageEntity]
     let morePagesAvailable: Bool
     
-    private let adaptiveColumn = [
-        GridItem(.flexible(), spacing: 15, alignment: .bottom),
-        GridItem(.flexible(), spacing: 15, alignment: .bottom)
-    ]
+    private let adaptiveColumn: [GridItem] = Array(repeating: .init(.adaptive(minimum: 120)), count: 2)
+    
     
     private let singleColumn = [
            GridItem(.flexible()),
