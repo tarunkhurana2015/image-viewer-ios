@@ -12,6 +12,30 @@ The Clean Architecture divides a project into 3 layers:
 2. `Presentation Layer` - contains UI (UIViewControllers or `SwiftUI` Views). Views are coordinated by `ViewModels` (Presenters) which execute one or many Use Cases. Presentation Layer depends only on the Domain Layer.
 3. `Data Layer` - contains `Repository Implementations` and one or many `Data Sources`. Repositories are responsible for coordinating data from different Data Sources. Data Source can be Remote or Local (for example persistent database). Data Layer depends only on the Domain Layer. In this layer, we can also add mapping of Network JSON Data (e.g. Decodable conformance) to Domain Models.
 
+## Dependency Graph
+
+![graph](Resources/cleanarchitecture2.png)
+
+### Data Flow
+ - View(UI) calls action from Store (Recucer).
+
+ - Reducer executes Use Case.
+
+ - Use Case combines data from User and Repositories.
+
+ - Each Repository returns data from a Remote Data (Network), Persistent DB Storage Source or In-memory Data (Remote or Cached).
+
+ - Information flows back to the View(UI) where we display the list of items.
+
+### Dependency Direction
+ - Presentation Layer -> Domain Layer <- Data Repositories Layer
+
+ - Presentation Layer (MVVM) = `Store(Reducers) + Views(UI)`
+
+ - Domain Layer = `Entities + Use Cases + Repositories Interfaces`
+
+ - Data Repositories Layer = `Repositories Implementations + API(Network) + Persistence DB`
+
 ##  iOS Tech stack
 
 
