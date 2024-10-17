@@ -70,7 +70,7 @@ public struct SearchImageViewReducer {
                 }                
                 return .run { send in
                     do {
-                        let entities = try await useCaseSearch.execute(for: searchTerm.lowercased().replacingOccurrences(of: " ", with: ""), page: page, per_page: 20)
+                        let entities = try await useCaseSearch.execute(for: searchTerm.lowercased().replacingOccurrences(of: " ", with: "+"), page: page, per_page: 20)
                         let newEntities = oldEntities + entities // append the new page entities
                         await send(.loadedData(entity: newEntities, searchTerm: searchTerm, morePagesAvailable: true))
                     } catch {

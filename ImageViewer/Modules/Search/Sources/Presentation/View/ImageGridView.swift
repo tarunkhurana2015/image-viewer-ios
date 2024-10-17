@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct ImageGridView: View {
     
@@ -17,7 +18,7 @@ struct ImageGridView: View {
     @ViewBuilder
     var body: some View {
         VStack {
-            AsyncImage(url: imageEntity.previewImageUrl) { image in
+            CachedAsyncImage(url: imageEntity.previewImageUrl) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
