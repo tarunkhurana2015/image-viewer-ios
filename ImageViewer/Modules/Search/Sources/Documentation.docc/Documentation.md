@@ -19,7 +19,17 @@ Clean architecture principle emphasizes the sepration of concertns between diffe
 
 ## Overview
 
-In this propject i have used the `Modular`, `Clean Architecture`, with `Composable` design patterns. The app supports `iPhone - Portrait and Landscape`, `iPad - All orientation` | `Dynamic Type` | `Light and Dark mode`
+In this propject i have used the `Modular`, `Clean Architecture`, with `Composable` design patterns. 
+
+The app supports 
+
+| Device Aspect | Support |
+| ------------- |:-------------:|
+| iPhone      | `Portrait and Landscape`       |
+| iPad      |`All orientation` |
+| Light Mode      | `yes`   |
+| Dark Mode      | `yes`    |
+
 
 ## Reference
 
