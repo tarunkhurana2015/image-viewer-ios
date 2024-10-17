@@ -9,7 +9,7 @@
 
 import Foundation
 
-public struct ImageEntity: Hashable, Identifiable {
+public struct ImageEntity: Decodable, Hashable, Identifiable {
     
     public let id: String
     let previewImageUrl: URL?

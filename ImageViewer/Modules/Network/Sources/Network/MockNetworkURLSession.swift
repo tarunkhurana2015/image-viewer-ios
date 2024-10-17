@@ -13,7 +13,7 @@ public struct MockNetworkURLSession: NetworkURLSession {
         if shouldBeError {
             throw NetworkError.notConnected
         }
-        if let url = Bundle.module.url(forResource: "Data", withExtension: "json") {
+        if let url = Bundle.module.url(forResource: "Images", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 return data

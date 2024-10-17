@@ -23,6 +23,27 @@
         "identifier" : "NetworkTests",
         "name" : "NetworkTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Search",
+        "identifier" : "DataTests",
+        "name" : "DataTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Search",
+        "identifier" : "DomainTests",
+        "name" : "DomainTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Search",
+        "identifier" : "PresentationTests",
+        "name" : "PresentationTests"
+      }
     }
   ],
   "version" : 1

@@ -30,10 +30,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:ImageViewerRTestPlan.xctestplan">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:ImageViewerTestPlan.xctestplan">
+            reference = "container:ImageViewerTestPlan.xctestplan"
+            default = "YES">
          </TestPlanReference>
       </TestPlans>
       <Testables>
