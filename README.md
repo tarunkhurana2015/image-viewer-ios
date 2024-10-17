@@ -65,6 +65,15 @@ The app supports
 | Dark Mode      | `yes`    |
 
 
+## Performance
+
+There are few factors that are considrered to enhance the App's performance
+
+1. `Image Caching` - The images are cached using a 3rd party library `CachedAsyncImage` to enahance the app's experience.
+2. `Pagination` - The data is lazily loaded using on-demand fetching of the data with the help of pagination.
+3. `Asynschronous Fetch` - The App works completely asynchronously and uses native `async-await` mechanism to make the app highly responsive.
+
+
 ## Screenshots
 
 ![iPhone Portrait](Screenshots/iphone-portrait.png)
