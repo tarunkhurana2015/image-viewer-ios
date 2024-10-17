@@ -76,11 +76,8 @@ There are few factors that are considrered to enhance the App's performance
 
 ## Screenshots
 
-![iPhone Portrait](Screenshots/iphone-portrait.png)
-![iPhone Landscape](Screenshots/iphone-landscape.png)
-![iPhone Dark](Screenshots/iphone-dark.png)
+<img src="Screenshots/iphone-portrait.png" width=200 height=500><img src="Screenshots/iphone-landscape.png" width=500 height=200><img src="Screenshots/iphone-dark.png" width=200 height=500>
 
-![iPad Portrait](Screenshots/ipad-portrait.png)
-![iPad Landscape](Screenshots/ipad-landscape.png)
-![iPad Dark](Screenshots/ipad-dark.png)
+<img src="Screenshots/ipad-portrait.png" width=700 height=1200><img src="Screenshots/ipad-landscape.png" width=1200 height=700><img src="Screenshots/ipad-dark.png" width=1200 height=700>
+
 
