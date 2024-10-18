@@ -73,11 +73,38 @@ There are few factors that are considrered to enhance the App's performance
 2. `Pagination` - The data is lazily loaded using on-demand fetching of the data with the help of pagination.
 3. `Asynschronous Fetch` - The App works completely asynchronously and uses native `async-await` mechanism to make the app highly responsive.
 
+## Scalability
+The App is highly scalable due to the modularity and any new modules can be added as a package.
+
+## Maintainability
+Keeping the modules separate enables the app to maintain easily.
+
+## Testability
+All the modules are tested separately and and keeps it tests in it's own module. 
+
 
 ## Screenshots
 
-<img src="Screenshots/iphone-portrait.png" width=200 height=500><img src="Screenshots/iphone-landscape.png" width=500 height=200><img src="Screenshots/iphone-dark.png" width=200 height=500>
+### iPhone
 
-<img src="Screenshots/ipad-portrait.png" width=700 height=1200><img src="Screenshots/ipad-landscape.png" width=1200 height=700><img src="Screenshots/ipad-dark.png" width=1200 height=700>
+#### Portrait
+<img src="Screenshots/iphone-portrait.png" width=200 height=500>
+
+#### Landscape
+<img src="Screenshots/iphone-landscape.png" width=500 height=200>
+
+#### Dark Mode
+<img src="Screenshots/iphone-dark.png" width=200 height=500>
+
+### iPad
+
+#### Portrait
+<img src="Screenshots/ipad-portrait.png" width=700 height=1000>
+
+#### Landscape
+<img src="Screenshots/ipad-landscape.png" width=1000 height=700>
+
+#### Dark Mode
+<img src="Screenshots/ipad-dark.png" width=1000 height=700>
 
 
