@@ -60,7 +60,7 @@ public struct SearchImageViewReducer {
                 state.page = 1
                 state.lastSearchTerm = ""
                 return .none
-            case let .searchCancelled(oldEntities): // when the cncel button is pressed (load the data with the old entities and preserver the search term)
+            case let .searchCancelled(oldEntities): // when the cancel button is pressed (load the data with the old entities and preserver the search term)
                 return .send(.loadData(oldEntities: oldEntities, searchTerm: state.lastSearchTerm))
             case let .loadData(oldEntities, searchTerm): // load data from network
                 if oldEntities.isEmpty {
@@ -79,7 +79,7 @@ public struct SearchImageViewReducer {
                         await send(.loadedData(entity: newEntities, searchTerm: searchTerm, morePagesAvailable: true)) // still more pages can be downloaded
                     } catch {
                         if page == 1 { // error on loading the first page
-                            await send(.errorInLoadingData(error: error, searchTerm: searchTerm)) // error occured 
+                            await send(.errorInLoadingData(error: error, searchTerm: searchTerm)) // error occured
                         } else { // error in loading any other page, don't show the error, just show the same data.
                             await send(.loadedData(entity: oldEntities, searchTerm: searchTerm, morePagesAvailable: false)) // no more pages can be downloaded
                         }

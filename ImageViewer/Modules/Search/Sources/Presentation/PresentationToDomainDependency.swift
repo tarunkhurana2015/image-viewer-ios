@@ -12,6 +12,7 @@ import Dependencies
 
 enum SearchUsecaseCaseKey: DependencyKey {
     static var liveValue: SearchUseCase = SearchUseCaseImpl()
+    static var testValue: SearchUseCase = SearchUseCaseImpl()
 }
 extension DependencyValues {
     var useCaseSearch: SearchUseCase {
